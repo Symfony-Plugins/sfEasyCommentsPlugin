@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<dynamics-plugin>
+  <import resource="dynamics-jquery.xml" />
+
+  <package name="main">
+    <require>jquery</require>
+
+    <stylesheet>main</stylesheet>
+    <javascript>form-jquery</javascript>
+
+    <!--
+
+      @TODO
+      just an idea for sfDynamics - not yet implemented but could be a good
+      solution to provide js framework independant plugins.
+
+    <switch>
+      <case break="true">
+        <condition>
+          <has-package>jquery</has-package>
+        </condition>
+        <action>
+          <javascript>form-jquery</javascript>
+        </action>
+      </case>
+
+      <default>
+        <import resource="dynamics-jquery.xml" />
+        <require>jquery</require>
+
+        <javascript>form-jquery</javascript>
+      </default>
+    </switch>
+
+    -->
+  </package>
+</dynamics-plugin>

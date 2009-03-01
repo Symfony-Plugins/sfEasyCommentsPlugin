@@ -1,13 +1,12 @@
-sfEasyCommentPlaceholder:
-  tableName: sf_easy_comment_placeholder
+sfEasyCommentsPlaceholder:
+  tableName: sf_easy_comments_placeholder
   columns:
-    id: ~
-    key: string(32)
+    identifier_key: string(32)
 
-sfEasyCommentItem:
-  tableName: sf_easy_comment_item
+sfEasyCommentsItem:
+  tableName: sf_easy_comments_item
+  actAs: [ Timestampable ]
   columns:
-    id: ~
     placeholder_id: integer
     parent_id: integer
     body: string(4096)
@@ -19,6 +18,7 @@ sfEasyCommentItem:
     validation_flag: boolean
   relations:
     Placeholder:
+      class: sfEasyCommentsPlaceholder
       foreignAlias: Items
       local:        placeholder_id
       foreign:      id

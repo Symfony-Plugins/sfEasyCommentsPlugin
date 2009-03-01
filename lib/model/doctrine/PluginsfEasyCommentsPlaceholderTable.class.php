@@ -6,7 +6,7 @@
  * @version SVN: $Id$
  * @author  Romain Dorgueil <romain.dorgueil@symfony-project.com>
  */
-class PluginsfEasyCommentPlaceholderTable extends Doctrine_Table
+class PluginsfEasyCommentsPlaceholderTable extends Doctrine_Table
 {
   /**
    * get - retrieve an existing placeholder or create one for the given context
@@ -18,12 +18,12 @@ class PluginsfEasyCommentPlaceholderTable extends Doctrine_Table
   {
     $key = md5($context);
 
-    $object = $this->findOneByKey($key);
+    $object = $this->findOneByIdentifierKey($key);
 
     if (!$object)
     {
-      $object = new sfEasyCommentPlaceholder();
-      $object['key'] = $key;
+      $object = new sfEasyCommentsPlaceholder();
+      $object['identifier_key'] = $key;
       $object->save();
     }
 

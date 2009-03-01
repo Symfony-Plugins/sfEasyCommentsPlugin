@@ -1,0 +1,16 @@
+sfEasyCommentsPlugin
+====================
+
+Simple plugin to add comment forms on about anything. All you need to have is
+something unique that determines what you're commenting. For example, it can be
+a database object, or a documentation page name.
+
+Once you found what context will determine your comments placeholder, just use:
+
+<?php sfEasyCommentsHelper::render_for($myContext); ?>
+
+You need to activate sfEasyComments module in your application's settings.yml
+in order to use the plugin.
+
+Since symfony 1.2, you also need to activate the plugin either in your
+ProjectConfiguration or in one of your apps' configuration classes.

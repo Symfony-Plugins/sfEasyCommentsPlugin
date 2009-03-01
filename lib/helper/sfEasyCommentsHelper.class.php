@@ -16,4 +16,38 @@ class sfEasyCommentsHelper
       'placeholder' => Doctrine::getTable('sfEasyCommentsPlaceholder')->get($context)
     ));
   }
+
+  static public function render_interval($timestamp)
+  {
+    $ts_diff = time() - $timestamp;
+    $unit = 'second';
+
+    if ($ts_diff >= 60)
+    {
+      $ts_diff = round( $ts_diff / 60 );
+      $unit = 'minute';
+      if ($ts_diff >= 60)
+      {
+        $ts_diff = round( $ts_diff / 60 );
+        $unit = 'hour';
+        if ($ts_diff >= 24)
+        {
+          $ts_diff = round( $ts_diff / 24 );
+          $unit = 'day';
+          if ($ts_diff > 30)
+          {
+            $ts_diff = round( $ts_diff / 30 );
+            $unit = 'month';
+            if ($ts_diff >= 12)
+            {
+              $ts_diff = round( $ts_diff / 12 );
+              $unit = 'year';
+            }
+          }
+        }
+      }
+    }
+
+    return $ts_diff . '&nbsp;' . $unit . (($ts_diff>1)?'s':''). ' ago';
+  }
 }
