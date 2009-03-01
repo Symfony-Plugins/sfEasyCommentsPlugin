@@ -1,11 +1,38 @@
 /* */
 
-form.sfEasyComments table
+form.sfEasyCommentsForm label
 {
-  width: 100%;
+  float: left;
+  width: 120px;
+  font-weight: bold;
 }
 
-form.sfEasyComments th
+form.sfEasyCommentsForm input,
+form.sfEasyCommentsForm textarea
 {
-  width: 20%;
+  width: 180px;
+  margin-bottom: 5px;
+}
+
+form.sfEasyCommentsForm textarea
+{
+  width: 250px;
+  height: 150px;
+}
+
+form.sfEasyCommentsForm .checkbox
+{
+  width: 1em;
+}
+
+form.sfEasyCommentsForm .submit-button
+{
+  margin-left: 120px;
+  margin-top: 5px;
+  width: 90px;
+}
+
+form.sfEasyCommentsForm br
+{
+  clear: left;
 }

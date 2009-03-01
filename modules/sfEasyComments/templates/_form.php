@@ -8,13 +8,11 @@
       {
         if (!$field->isHidden())
         {
-          echo '<div>'.$field->renderError();
-          echo $field->renderLabel();
-          echo $field->render().'</div>';
+          echo $field->renderError().$field->renderLabel().$field->render().'<br />';
         }
       }
     ?>
-    <input type="submit" value="Post!" />
+    <input type="submit" value="Post!" class="submit-button" />
   </form>
 <?php endif; ?>
 

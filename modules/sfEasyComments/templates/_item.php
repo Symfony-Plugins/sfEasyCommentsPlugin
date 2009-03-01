@@ -8,5 +8,5 @@
     (<?php echo sfEasyCommentsHelper::render_interval(strtotime($item['created_at'])); ?>)
   </h4>
 
-  <?php echo htmlentities(str_replace("\n", '<br />', $item['body'])); ?>
+  <?php echo str_replace("\n", '<br />', htmlentities($item['body'])); ?>
 </div>
