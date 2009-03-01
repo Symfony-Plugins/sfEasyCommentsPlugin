@@ -1,5 +1,5 @@
 <?php if (!$commentPosted): ?>
-  <form action="<?php echo url_for('sfEasyComments/index'); ?>" method="post" class="sfEasyCommentsForm" onsubmit="return sfEasyComments.processSubmit(this);">
+  <form action="<?php echo url_for('@sfEasyComments_form'); ?>" method="post" class="sfEasyCommentsForm" onsubmit="return sfEasyComments.processSubmit(this);">
     <?php
       echo $form->renderGlobalErrors();
       echo $form->renderHiddenFields();
