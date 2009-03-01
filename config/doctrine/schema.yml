@@ -1,0 +1,30 @@
+sfEasyCommentPlaceholder:
+  tableName: sf_easy_comment_placeholder
+  columns:
+    id: ~
+    key: string(32)
+
+sfEasyCommentItem:
+  tableName: sf_easy_comment_item
+  columns:
+    id: ~
+    placeholder_id: integer
+    parent_id: integer
+    body: string(4096)
+    spam_value: integer
+    author_name: string(64)
+    author_email: string(128)
+    author_website: string(128)
+    author_notify_flag: boolean
+    validation_flag: boolean
+  relations:
+    Placeholder:
+      foreignAlias: Items
+      local:        placeholder_id
+      foreign:      id
+      type:         one
+      foreignType:  many
+
+
+
+
