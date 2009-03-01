@@ -18,7 +18,11 @@ class PluginsfEasyCommentsPlaceholderTable extends Doctrine_Table
   {
     $key = md5($context);
 
-    $object = $this->findOneByIdentifierKey($key);
+    $object = $this->createQuery('p')
+      ->select('p.*, i.*')
+      ->leftJoin('p.Items i')
+      ->execute()
+      ->getFirst();
 
     if (!$object)
     {
