@@ -12,7 +12,8 @@ class ProjectConfiguration extends sfProjectConfiguration
 {
   public function setup()
   {
-    $this->setPlugins(array('sfEasyCommentsPlugin'));
+    $this->setPlugins(array('sfDoctrinePlugin', 'sfDynamicsPlugin', 'sfEasyCommentsPlugin'));
     $this->setPluginPath('sfEasyCommentsPlugin', dirname(__FILE__).'/../../../..');
+    $this->setPluginPath('sfDynamicsPlugin', realpath(dirname(__FILE__).'/../../../../../sfDynamicsPlugin'));
   }
 }

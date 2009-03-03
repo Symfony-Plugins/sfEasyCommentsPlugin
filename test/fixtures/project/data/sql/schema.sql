@@ -1,0 +1,2 @@
+CREATE TABLE sf_easy_comments_item (id INTEGER PRIMARY KEY AUTOINCREMENT, placeholder_id INTEGER, parent_id INTEGER, body VARCHAR(4096), spam_value INTEGER, author_name VARCHAR(64), author_email VARCHAR(128), author_website VARCHAR(128), author_notify_flag INTEGER, validation_flag INTEGER, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL);
+CREATE TABLE sf_easy_comments_placeholder (id INTEGER PRIMARY KEY AUTOINCREMENT, identifier_key VARCHAR(32));

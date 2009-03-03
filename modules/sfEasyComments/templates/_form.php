@@ -17,11 +17,11 @@
 <?php endif; ?>
 
 <?php if (count($placeholder['Items'])): ?>
-
-  <hr />
-
-  <?php foreach ($placeholder['Items'] as $item): ?>
-    <?php include_partial('sfEasyComments/item', array('item'=>$item)); ?>
-  <?php endforeach; ?>
-
+  <ul class="sfEasyCommentsItemList">
+    <?php foreach ($placeholder['Items'] as $item): ?>
+      <li>
+        <?php include_partial('sfEasyComments/item', array('item'=>$item)); ?>
+      </li>
+    <?php endforeach; ?>
+  </ul>
 <?php endif; ?>
