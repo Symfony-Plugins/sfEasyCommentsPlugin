@@ -7,7 +7,8 @@ a database object, or a documentation page name.
 
 Once you found what context will determine your comments placeholder, just use:
 
-<?php sfEasyCommentsHelper::render_for($myContext); ?>
+    [php]
+    <?php sfEasyCommentsHelper::render_for($myContext); ?>
 
 You need to activate sfEasyComments module in your application's settings.yml
 in order to use the plugin.
