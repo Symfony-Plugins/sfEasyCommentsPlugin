@@ -21,6 +21,7 @@ class PluginsfEasyCommentsPlaceholderTable extends Doctrine_Table
     $object = $this->createQuery('p')
       ->select('p.*, i.*')
       ->leftJoin('p.Items i')
+      ->where('p.identifier_key = ?', array($key))
       ->execute()
       ->getFirst();
 
