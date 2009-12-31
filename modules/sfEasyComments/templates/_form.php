@@ -16,12 +16,4 @@
   </form>
 <?php endif; ?>
 
-<?php if (count($placeholder['Items'])): ?>
-  <ul class="sfEasyCommentsItemList">
-    <?php foreach ($placeholder['Items'] as $item): ?>
-      <li>
-        <?php include_partial('sfEasyComments/item', array('item'=>$item)); ?>
-      </li>
-    <?php endforeach; ?>
-  </ul>
-<?php endif; ?>
+<?php include_partial('sfEasyComments/items', array('items' => $placeholder['Items'])); ?>
