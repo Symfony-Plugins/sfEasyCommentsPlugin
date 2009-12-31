@@ -11,9 +11,9 @@ class sfEasyCommentsRouting
   {
     list($sfVersionMajor, $sfVersionMinor, $sfVersionRelease) = explode('.', SYMFONY_VERSION);
 
-    if (($sfVersionMajor!=1) || (!in_array($sfVersionMinor, array(1,2,3))))
+    if (($sfVersionMajor!=1) || (!in_array($sfVersionMinor, array(1, 2, 3, 4))))
     {
-      throw new sfConfigurationException(self::PLUGIN_NAME.' needs symfony 1.1 to 1.3 to run.');
+      throw new sfConfigurationException(self::PLUGIN_NAME.' needs symfony 1.1 to 1.4 to run.');
     }
 
     self::$newStyleRoutes = (bool)($sfVersionMinor>1);
