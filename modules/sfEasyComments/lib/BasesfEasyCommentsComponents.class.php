@@ -17,6 +17,15 @@ abstract class BasesfEasyCommentsComponents extends sfComponents
     $this->addRequiredMember('placeholder', 'sfEasyCommentsPlaceholder');
   }
 
+  public function executeLatest(sfWebRequest $request)
+  {
+    sfDynamics::load('sfEasyCommentsPlugin.main');
+
+    $this->addOptionalMember('count', 8);
+
+    $this->items = Doctrine::getTable('sfEasyCommentsItem')->getLatest($this->count);
+  }
+
   public function executeForm(sfWebRequest $request)
   {
     $this->addRequiredMember('placeholder', 'sfEasyCommentsPlaceholder');

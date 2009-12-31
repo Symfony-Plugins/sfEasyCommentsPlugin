@@ -17,6 +17,11 @@ class sfEasyCommentsHelper
     ));
   }
 
+  static public function render_latest($count=8)
+  {
+    return get_component('sfEasyComments', 'latest', array('count' => $count));
+  }
+
   static public function render_interval($timestamp)
   {
     $ts_diff = time() - $timestamp;
